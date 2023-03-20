@@ -25,4 +25,8 @@ class Student{
  public static void eat(Str food){
    System.out.println("Eating..." + food);
  }
+
+ public int identifyYourself(){
+   return this.id
+ }
 }  
