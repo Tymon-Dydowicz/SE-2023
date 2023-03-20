@@ -17,4 +17,8 @@ class Student{
     System.out.println("Drinking... " + Liters + " of beer");
     System.out.println("Dead drunk");
  }
+
+ public static void eat(Str food){
+   System.out.println("Eating..." + food);
+ }
 }  
