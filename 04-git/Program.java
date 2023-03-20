@@ -3,7 +3,8 @@
 //Students can only drink for now but they do that frequently 
 class Student{  
  //defining fields  
- int id;//field or data member or instance variable  
+ int id;//field or data member or instance variable 
+ int hunger; 
  String name;  
  //creating main method inside the Student class  
  public static void main(String args[]){  
@@ -24,6 +25,7 @@ class Student{
 
  public static void eat(Str food){
    System.out.println("Eating..." + food);
+   this.hunger -= 100;
  }
 
  public int identifyYourself(){
