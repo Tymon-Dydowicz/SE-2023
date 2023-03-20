@@ -1,5 +1,6 @@
 //Java Program to illustrate how to define a class and fields  
-//Defining a Student class.  
+//Defining a Student class. 
+//Students can only drink for now but they do that frequently 
 class Student{  
  //defining fields  
  int id;//field or data member or instance variable  
@@ -14,8 +15,11 @@ class Student{
  }  
 
  public static void drink(int Liters){
+    Str beerType = "Lager";
     System.out.println("Drinking... " + Liters + " of beer");
+    System.out.println("Because it was a Lager the student ended up");
     System.out.println("Dead drunk");
+    this = null;
  }
 
  public static void eat(Str food){
