@@ -12,4 +12,9 @@ class Student{
   System.out.println(s1.id);//accessing member through reference variable  
   System.out.println(s1.name);  
  }  
+
+ public static void drink(int Liters){
+    System.out.println("Drinking... " + Liters + " of beer");
+    System.out.println("Dead drunk");
+ }
 }  
