@@ -4,3 +4,4 @@
 Repository for programming assignments from Software Engineering course\
 Currently featuring:
 *  grain bank application using java maven
+*  currently working on git tasks
