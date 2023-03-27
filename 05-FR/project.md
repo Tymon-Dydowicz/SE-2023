@@ -16,9 +16,9 @@ Specification of functional requirements as part of computerisation of the produ
 
 **Main scenario:**
 1. [Seller](#ac1) offers the product at an auction. ([UC1](#uc1))
-2. [Buyer](#ac2) offers a bid for the product that is higher than the currently highest bid. ([BR1](#br1))
+2. [Buyer](#ac2) offers a bid for the product that is higher than the currently highest bid. ([BR1](#br1) / [UC2](#uc2))
 3. [Buyer](#ac2) wins the auction ([BR2](#br2))
-4. [Buyer](#ac2) transfers the amount due to the Seller.
+4. [Buyer](#ac2) transfers the amount due to the Seller. ([UC3](#uc3))
 5. [Seller](#ac1) transfers the product to the Buyer.
 
 **Alternative scenarios:** 
@@ -50,10 +50,10 @@ A person intending to purchase a product at an auction..
 
 [Seller](#ac1):
 * [UC1](#uc1): Offering a product at an auction
-* ...
 
 [Buyer](#ac2):
-* ...
+* [UC2](#uc2): Making a bid on a given auction
+* [UC3](#uc3): Transfering money for a won auction to the seller
 
 ---
 <a id="uc1"></a>
@@ -77,17 +77,51 @@ A person intending to purchase a product at an auction..
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Making a bid on a given auction
 
-**Actors:** [Seller](#ac1), [Buyer](#ac2), ...
+**Actors:** [Buyer](#ac2)
 
 **Main scenario:**
-1. ...
+1. [Buyer](#ac2) selects which item he wants to bid on
+2. System asks for the amount of money to bid
+3. [Buyer](#ac2) provides the number
+4. System checks whether that value abides by [BR1](#br1)
+5. System informs that the bid has been succesffuly booked
 
 **Alternative scenarios:** 
 
-1.A. ...
-* 4.A.1. ...
+4.A. The amount of money is not correct
+* 4.A.1. System informs about incorrectness
+* 4.A.2 Continue to step 2
+
+---
+
+<a id="uc3"></a>
+### UC3: Transfering money for a won auction to the seller
+
+**Actors:** [Buyer](#ac2)
+
+**Main scenario:**
+1. [Buyer](#ac2) selects which item he wants to pay for
+2. System checks who the seller of that item is
+3. System asks for the method of payment
+4. [Buyer](#ac2) chooses the desired method
+5. System asks for appropriate data
+6. [Buyer](#ac2) provides all the neccessary data
+7. Systems checks the validity of the data
+8. System adds the money to the account of previously determined seller
+9. System informs the [Buyer](#ac2) that the payment has been confirmed
+
+**Alternative scenarios:** 
+
+2.A. Could not find the appropriate [Seller](#ac1)
+* 2.A.1. System informs that the item is no longer available
+* 2.A.2. End of the use case
+
+7.A. The data provided is incorrect
+* 7.A.1. System informs about incorrectness
+* 7.A.2. Continue to step 5
+
 
 ---
 
@@ -117,9 +151,9 @@ Auction is won by [Buyer](#ac2) who submitted the highest bid before the end of 
 ## CRUDL Matrix
 
 
-| Use case                                  | Auction | Product | ... |
-| ----------------------------------------- | ------- | ------- | --- |
-| UC1: Offering a product at an auction     |    C    |    C    | ... |
-| ???                                       |   ...   |   ...   | ... |
-
+| Use case                                  | Auction | Product |
+| ----------------------------------------- | ------- | ------- |
+| UC1: Offering a product at an auction     |    C    |    C    |
+| UC2: Making a bid on a given auction                                       |   RU   |   R   |
+| UC3: Transfering money for a won auction to the seller| RD| R |
 
