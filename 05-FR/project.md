@@ -19,7 +19,7 @@ Specification of functional requirements as part of computerisation of the produ
 2. [Buyer](#ac2) offers a bid for the product that is higher than the currently highest bid. ([BR1](#br1) / [UC2](#uc2))
 3. [Buyer](#ac2) wins the auction ([BR2](#br2))
 4. [Buyer](#ac2) transfers the amount due to the Seller. ([UC3](#uc3))
-5. [Seller](#ac1) transfers the product to the Buyer.
+5. [Seller](#ac1) transfers the product to the Buyer. ([UC4](#uc4))
 
 **Alternative scenarios:** 
 
@@ -50,6 +50,7 @@ A person intending to purchase a product at an auction..
 
 [Seller](#ac1):
 * [UC1](#uc1): Offering a product at an auction
+* [UC4](#uc4): Transfering item to the buyer
 
 [Buyer](#ac2):
 * [UC2](#uc2): Making a bid on a given auction
