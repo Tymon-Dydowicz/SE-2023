@@ -5,7 +5,7 @@ Question: Would the tests stop working if the setUp annotation was changed from 
 Answer: Yes, because the calculator object was not set to static
 
 Question: Which method will be marked as Failure and which will be marked as Error? \
-Answer: Test1 will be markes as Error because it ran but didn't give the desired result and Test2 will be a failure because its runtime was interupted  
+Answer: Test1 will be marked as Error because it ran but didn't give the desired result and Test2 will be a failure because its runtime was interupted  
 
 Question: What type of thrown object does JUnit expect to determine that the test has failed in terms of the Failure category (it will be marked with an exclamation mark against a yellow circle)? \
 Answer: An object of class 'Throwable'
